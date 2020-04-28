@@ -12,7 +12,10 @@ from skimage import img_as_ubyte
 
 COLOR_LAYERS = (3,)
 AS_GRAY=False
-FILENAME = "2018_12_19_14_41_55win5_color"
+#issue 1:
+#filename changed there was no "2018_12_19_14_41_55win5_color" in the directory
+#Changed by Abhinav Singh, user can set their own Google colab path
+FILENAME = "/content/drive/My Drive/Colab Notebooks/WIN5"
 
 def load_test_data(folder="file dataset/img_celeba", limit=5000, resize_data=(64, 64)):
     img_shape = resize_data + COLOR_LAYERS
@@ -35,8 +38,12 @@ def load_test_data(folder="file dataset/img_celeba", limit=5000, resize_data=(64
 
         print(f"{(((i+1) * 100) / total_size):0.4f}", end='\r', flush=True)
 
-
-    print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
+        #change made by Abhinav Singh
+        print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
+    
+    #issue 2:
+    #this statement was out of loop and i doesn't exist before or after the loop
+    #print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
     return (cropped, noisy)
 
 model = keras.models.load_model(f"{FILENAME}.h5")
