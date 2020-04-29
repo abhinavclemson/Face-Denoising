@@ -36,7 +36,7 @@ size = (width, height)
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 
 # for writing each output frame in asg04.mp4 file as output with 30 frame per second
-out = cv2.VideoWriter('asg05.mp4', fourcc, 30.0, size)
+out = cv2.VideoWriter('OpenSourceProj.mp4', fourcc, 30.0, size)
 
 
 def face_object(img, name):
@@ -74,7 +74,7 @@ def face_object(img, name):
             #cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
             if no_of_eyes>=2:
-                cv2.imwrite("DataSet/VideoInputFace" + str(name) +'_'+str(i)+".jpg", roi_color)
+                cv2.imwrite("DataSet/VideoInputFace/Face" + str(name) +'_'+str(i)+".jpg", roi_color)
 
         # iterating list of all smiles in a given frame
 
