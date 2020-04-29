@@ -74,7 +74,7 @@ def face_object(img, name):
             #cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
             if no_of_eyes>=2:
-                cv2.imwrite("output/face" + str(name) +'_'+str(i)+".jpg", roi_color)
+                cv2.imwrite("DataSet/VideoInputFace" + str(name) +'_'+str(i)+".jpg", roi_color)
 
         # iterating list of all smiles in a given frame
 
