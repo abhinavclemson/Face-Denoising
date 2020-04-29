@@ -90,6 +90,7 @@ def DNCNN(img_shape=(64, 64, 1)): #best one yet
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['acc'])
     return model
 
+
 def DNCNN_color(): #testing
     input_img = Input(shape=(64, 64, 3))
     x = Conv2D(64, (3, 3), padding='same')(input_img)
