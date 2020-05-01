@@ -70,7 +70,7 @@ def face_object(img, name):
         no_of_eyes = 0
         for (ex, ey, ew, eh) in eyes:
             # drawing rectangle on each eye
-            no_of_eyes += 1
+            no_of_eyes >= 1
             #cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
             if no_of_eyes>=2:

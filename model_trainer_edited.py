@@ -192,7 +192,13 @@ def load_dataset(folder="file dataset/img_celeba", limit=None, resize_data=(64,6
         print(f"{(((i+1) * 100) / total_size):0.4f}", end='\r', flush=True)
 
 
-    print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
+
+        #changed by Abhinav Singh
+        #issue 1:
+        print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
+
+    #outside of the loop
+    #print(f"{(((i+1) * 100) / total_size):0.4f} - Total loading time: {(time.time() - start):4.2f}", end='\n', flush=True)
     return (cropped, noisy)
 
 clean, noisy = load_dataset(limit=LIMIT)
